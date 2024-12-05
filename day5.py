@@ -1,19 +1,18 @@
+from collections import defaultdict
+
 file = open('input.txt', 'r')
 lines = file.readlines()
 
-y = {}
+y = defaultdict(list)
 p = []
+
 
 for l in lines:
     if l != '\n':
         x = l.strip().split("|")
-        if x[0] in y:
-            y[x[0]].append(x[1])
-        else:
-            y[x[0]] = [x[1]]
+        y[x[0]].append(x[1])
     else:
         break
-
 
 count = 0
 for l in reversed(lines):
@@ -23,12 +22,10 @@ for l in reversed(lines):
         
         v = True
         for i in range(1, len(z)):
-            for j in range(i-1, -1, -1):
-                if z[i] in y:
-                    t = y[z[i]]
-                    if z[j] in t:
-                        v = False
-                        break
+            for j in range(i-1, -1, -1):    
+                if z[j] in y[z[i]]:
+                    v = False
+                    break
 
         if v:
             count += int(z[len(z)//2])
