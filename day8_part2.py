@@ -16,7 +16,7 @@ for r in range(len(lines)):
             f[lines[r][c]].append((r, c))
 
 vals = list(f.values())
-
+    
 count = 0
 for k, v in f.items():    
     for i in range(len(v)-1):
