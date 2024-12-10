@@ -1,4 +1,4 @@
-file = open('input.txt', 'r')
+file = open('input2.txt', 'r')
 lines = file.readline().strip()
 
 id = 0
