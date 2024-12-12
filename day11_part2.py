@@ -7,12 +7,10 @@ stones = stones[0].split()
 
 CACHE = {}
 
-
 def solve(stone, level):
     
     if (stone, level) in CACHE:
         return CACHE[(stone, level)]
-    
     
     if level == 75:
         return 1
