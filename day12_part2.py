@@ -9,7 +9,6 @@ R = len(g)
 C = len(g[0])
 
 
-
 def follow(grid, row, col, symbol, region):
 
     directions = [(1, 0), (0, 1), (-1, 0), (0, -1)] # down, right, up, left
@@ -40,6 +39,7 @@ def find_perimeter(region):
     }
 
     sq = []
+    
     directions = [(1, 0), (0, 1), (-1, 0), (0, -1)] # down, right, up, left
     for r, c in region:
         
@@ -51,6 +51,8 @@ def find_perimeter(region):
                 continue
 
             sq.append((r, c, d))
+
+
 
     for r,c,d in sq:
         if direction_map[d] == "right" or direction_map[d] == "left":
@@ -92,7 +94,7 @@ def find_perimeter(region):
                     i-=1
                 else:
                     break
-
+    
     return len(sq)
 
 seen = []
