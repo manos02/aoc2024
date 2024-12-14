@@ -57,10 +57,9 @@ for i in range(0, len(s)-1, 3):
     px = int(prize[0].split("=")[1][:-1])
     py = int(prize[1].split("=")[1])
 
-    
     SEEN = set()
     msolve((ax, ay), (bx,by), (px, py), [0,0], 0, 0)
-        
+
         
 for k,v in BEST.items():
     total += v
