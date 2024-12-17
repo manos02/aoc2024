@@ -1,4 +1,3 @@
-import math
 
 f = open("input2.txt", "r")
 f = f.read().strip()
