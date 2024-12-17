@@ -55,7 +55,6 @@ def djikstra(source, initial_direction):
     return dist      
 
 
-
 for i in range(R):
     for j in range(C):
 
@@ -68,14 +67,7 @@ for i in range(R):
 direction = 0
 
 d = djikstra((sr, sc), 0)
-
-
-d2 = djikstra((er, ec), 0)
 d3 = djikstra((er, ec), 1)
-d4 = djikstra((er, ec), 2)
-d5 = djikstra((er, ec), 3)
-
-
 
 points = 0
 
