@@ -77,15 +77,13 @@ def reverse_eng(loop, target, a_s=0): # target is our program
     for cand in (a_s * 8 + next_3_bits for next_3_bits in range(8)):
         last = run_program(loop, cand).pop()
         if last == int(target[-1]):
+            # print(cand)
             r = reverse_eng(loop, target[:-1], cand)
             if r != None:
                 return r
             else:
                 continue
     return None
-
-
-
 
 
 program = []
@@ -96,15 +94,12 @@ regC = int(f[2].split(":")[1])
 program = (f[4].split(":")[1]).strip().split(",")
 
 
-
-# print(run_program(program, regA))
-
-
 loop = program[:-2] # remove 3,0 pair 
 initial_a = reverse_eng(loop, program)
 print(initial_a)
 
-print(run_program(program, 236580836040301))
+# print(run_program(program, initial_a))
+# print(run_program(program, 392))
 
 
 
