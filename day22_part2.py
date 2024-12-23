@@ -26,11 +26,9 @@ for s in secret_numers:
         s = s%16777216
 
         n_price = int(str(s)[-1])
-        
         diff = n_price - price
 
         if len(sequence_list) == 4:
-
             sequence_list.pop(0)    
 
         sequence_list.append(diff)
